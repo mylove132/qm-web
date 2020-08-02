@@ -2,7 +2,7 @@
  * 用户信息
  */
 interface UserInfo {
-    username: string,
+    name: string,
     token: string,
     avatar: string,
     email: string

@@ -1,5 +1,6 @@
 import axios from 'axios'
 import { Message, MessageBox } from 'element-ui'
+import { UserModule } from '@/store/modules/user'
 
 const service = axios.create({
   baseURL: process.env.BASE_API,
@@ -22,10 +23,6 @@ service.interceptors.request.use(
 // Response interceptors
 service.interceptors.response.use(
   (response) => {
-    switch (response.code) {
-        case 404:
-            
-    }
     const res = response.data
     if (res.code !== 10000) {
       Message({

@@ -6,14 +6,19 @@ Vue.use(VueRouter)
   const routes: Array<RouteConfig> = [
   {
     path: '/login',
-    name: 'Login',
-    component: () => import('../views/login/index.vue')
+    name: 'login',
+    component: () => import('@/views/login/index.vue')
+  },
+  {
+    path: '/',
+    name: 'home',
+    meta: {auth: true},
+    component: () => import('@/views/home/index.vue')
   }
 ]
 
 const router = new VueRouter({
   mode: 'history',
-  base: process.env.BASE_URL,
   routes
 })
 
