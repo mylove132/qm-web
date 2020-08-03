@@ -1,21 +1,28 @@
 <template>
   <div class="home">
-      <h1>首页</h1>
+      <Header/>
+      <Content/>
+      <Footer/>
   </div>
 </template>
 
 <script lang="ts">
 import {
   Component,
-  Emit,
-  Inject,
-  Model,
-  Prop,
-  Provide,
-  Vue,
-  Watch
+  Vue
 } from "vue-property-decorator";
-@Component
+import Header from '@/components/common/header.vue';
+import Content from '@/components/common/content.vue';
+import Footer from '@/components/common/footer.vue';
+
+@Component({
+  name: 'Home',
+  components: {
+    Header,
+    Content,
+    Footer
+  }
+})
 export default class Home extends Vue {
   
 }
