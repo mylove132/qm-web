@@ -1,9 +1,9 @@
 import { VuexModule, Module, Action, Mutation, getModule } from 'vuex-module-decorators'
-import { login, logout, getUserByName } from '@/api/user'
+import { login, getUserByName } from '@/api/user'
 import { getToken, setToken, removeToken } from '@/utils/cookies'
 import store from '@/store'
 import route from '@/router'
-import { UserInfo, LoginInfo } from '@/model/user'
+import { UserInfo } from '@/model/user'
 
 
 @Module({ dynamic: true, store, name: 'user' })

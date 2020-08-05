@@ -5,12 +5,9 @@ import store from './store'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import { UserModule } from './store/modules/user';
-import Echart from 'echarts';
 
 //引入element UI组件
 Vue.use(ElementUI);
-//引入echarts
-Vue.prototype.$echarts = Echart;
 Vue.config.productionTip = false
 
 // 引入mock数据

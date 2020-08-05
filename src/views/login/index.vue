@@ -1,11 +1,11 @@
 <template>
   <div class="header">
     <el-form :model="loginForm" status-icon :rules="rules" ref="loginForm" label-width="100px">
-      <el-form-item label="用户名" prop="username">
-        <el-input type="text" v-model="loginForm.username" ref="username" autocomplete="off"></el-input>
+      <el-form-item prop="username">
+        <el-input type="text" v-model="loginForm.username" placeholder="please enter the erp" ref="username" autocomplete="off"></el-input>
       </el-form-item>
-      <el-form-item label="密码" prop="password">
-        <el-input type="password" v-model="loginForm.password" ref="password" autocomplete="off"></el-input>
+      <el-form-item prop="password">
+        <el-input type="password" v-model="loginForm.password" placeholder="please enter the password" ref="password" autocomplete="off"></el-input>
       </el-form-item>
       <el-form-item>
         <el-button type="primary" @click="login()">登录</el-button>
@@ -75,5 +75,20 @@ export default class Login extends Vue {
 }
 </script>
 
-<style scoped>
+<style lang='scss' scoped>
+    .header {
+      height: 300px;
+      width: 450px;
+      padding-top: 100px;
+      border-radius: 5px;
+      background-color: #394f62;
+      position:absolute;
+      left:50%;
+      top:50%;
+      transform: translate(-50%,-50%);
+      div {
+        margin-right: 10px;
+        margin-left: -30px;
+      }
+    }
 </style>

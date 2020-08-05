@@ -13,7 +13,7 @@ Vue.use(VueRouter)
     path: '/',
     name: 'home',
     meta: {auth: true},
-    component: () => import('@/views/home/index.vue')
+    component: () => import('@/views/dashboard/index.vue')
   }
 ]
 
